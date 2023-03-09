@@ -16,4 +16,4 @@ jobs:
         password: wfdiR1dscmB4
         port: 3069
         protocol: ftps-legacy
-        local-dir: ./huyneqs7/huyn.site/DocumentRoot/
+        local-dir: ./huyn.site/DocumentRoot/
