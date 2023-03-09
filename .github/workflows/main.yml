@@ -17,3 +17,4 @@ jobs:
         port: 3069
         protocol: ftps
         server-dir: ./huyn.site/DocumentRoot/
+        timeout: 60000
