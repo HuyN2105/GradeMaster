@@ -45,10 +45,6 @@ if(isset($_COOKIE['username']) && $_COOKIE['username']!==NULL){
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar-collapse" aria-expanded="true"><span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span></button>
 				<a class="navbar-brand" href="#"><span>Grade</span>Master</a>
 				<ul class="nav navbar-top-links navbar-right">
 					<li class="dropdown"><a href="/login.php">LOGIN</a></li>
