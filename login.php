@@ -41,7 +41,24 @@ if(isset($_COOKIE['username']) && $_COOKIE['username']!==NULL){
 ?>
 
 <body>
-	<div class="row">
+
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar-collapse" aria-expanded="true"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Grade</span>Master</a>
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown"><a href="/login.php">LOGIN</a></li>
+					<li class="dropdown"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfd9KC1Z-kbmN_GVTKq7QEk_PyYH-N0-p5AhKmRRcQ9gPzhUg/viewform?usp=pp_url">SIGN UP</a></li>
+				</ul>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="row" style="margin-top: 50vh; transform: translateY(-75%);">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Log in</div>

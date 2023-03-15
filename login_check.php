@@ -10,13 +10,14 @@ if ($stmt = $conn->prepare('SELECT `password`, `id` FROM `grademaster_account` W
 		$stmt->bind_result($pass, $id);
 		$stmt->fetch();
 		if ($_POST['password'] == $pass) {
+			session_regenerate_id();
 			if($_POST['remember']!=NULL){
 				setcookie("username", $username);
 				setcookie("password", $pass);
 				setcookie("id", $id);
 			}
-			session_regenerate_id();
 			$_SESSION['loggedin'] = true;
+			$_SESSION['username'] = $username;
 			$_SESSION['id'] = $id;
 			$result = true;
 		} else {

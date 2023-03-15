@@ -1,7 +1,7 @@
 <?php
 require("conn.php");
 
-$todo = "SELECT * FROM `tasks` WHERE `user_id` = ".$_COOKIE['id']." ORDER BY `time` ASC";
+$todo = "SELECT * FROM `tasks` WHERE `user_id` = ".$_SESSION['id']." ORDER BY `time` ASC";
 $todo_list = $conn->query($todo);
 
 if($todo_list->num_rows > 0){
