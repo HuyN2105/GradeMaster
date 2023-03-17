@@ -58,7 +58,7 @@ if(!isset($_SESSION['loggedin'])){
 										<?php
 										
 										require("conn.php");
-										$tohop_list = $conn->query("SELECT `mon` FROM `tohop` WHERE `user_id` = ".$_SESSION['id']);
+										$tohop_list = $conn->query("SELECT mon FROM tohop WHERE user_id = ".$_SESSION['id']);
 										while($row = $tohop_list->fetch_assoc()){
 											echo "<option value='".$row['mon']."'>".$row['mon']."</option>";
 										}
@@ -99,36 +99,50 @@ if(!isset($_SESSION['loggedin'])){
 						<?php
 
 						require("conn.php");
-						$tohop_list = $conn->query("SELECT `mon` FROM `tohop` WHERE `user_id` = ".$_SESSION['id']);
-						$monthu = 1;
-						while($row = $tohop_list->fetch_assoc()){
-							echo "<option value='".$row['mon']."'>".$row['mon']."</option>";
-							${"mon".$monthu."_result"} = $conn->query("SELECT `diem` FROM `tohop_data` WHERE LOWER(`ten mon`)=='toan'");
-							$monthu++;
-						}
-
 						
-						$mon2_result = $conn->query("SELECT `diem` FROM `tohop_data` WHERE LOWER(`ten mon`)=='ly'");
-						$mon3_result = $conn->query("SELECT `diem` FROM `tohop_data` WHERE LOWER(`ten mon`)=='hoa'");
-									
+						$tohop_list = $conn->query("SELECT `mon` FROM `tohop` WHERE `user_id` = ".$_SESSION['id']);
+						$mon = [];
+						$d = 0;
+						while($row = $tohop_list->fetch_assoc()){
+						    $monten[$d] = $row['mon'];
+							$d++;
+						} 
+						$diemtb = [];
+						$d = 0;
+						for ($i = 0; $i < 3; $i++){
+						    $t1 = 0;
+						    $t2 = 0;
+						    $mon = $conn->query('SELECT `diem`, `ld` FROM `tohop_data` WHERE `user_id` = '.$_SESSION['id'].' AND  LOWER(`ten mon`) = "'.strtolower($monten[$i]).'"');
+						    while($row = $mon->fetch_assoc()){
+						        $t1+=$row['diem'];
+						        if($row['ld'] == "tx") $t2+=1;
+						        else if($row['ld']=="gk") $t2+=2;
+						        else $t2+=3;
+						    }
+						    $diemtb[$d] = $t1/$t2;
+						    $d++;
+						}
 						?>
-
-						<div class="col-md-4">
-							<div class="form-group">
-								<label></label>
-								
+						<div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label><?php echo $monten[0]; ?> </label>
+									<p><?php echo $diemtb[0]; ?></p>
+									
+								</div>
 							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label>Toán</label>
-								
+							<div class="col-md-4">
+								<div class="form-group">
+									<label><?php echo $monten[1]; ?></label>
+									<p><?php echo $diemtb[1]; ?></p>
+									
+								</div>
 							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label>Loại Điểm</label>
-								
+							<div class="col-md-4">
+								<div class="form-group">
+									<label><?php echo $monten[2]; ?></label>
+									<p><?php echo $diemtb[2]; ?></p>
+								</div>
 							</div>
 						</div>
 					</div>
