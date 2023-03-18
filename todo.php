@@ -40,13 +40,13 @@ require('nav.php'); # side nav
 			<div class="panel-body">
 				<ul class="todo-list">
 					<?php
-					require("/php/todo_list.php");
+					require("./php/todo_list.php");
 					?>
 				</ul>
 			</div>
 			<div class="panel-footer">
 				<div class="input-group" style="width: 100%">
-					<form method="post" action="/php/todo_add.php" style="width: calc( 100% - 45px );" class="add-new-task">
+					<form method="post" action="./php/todo_add.php" style="width: calc( 100% - 45px );" class="add-new-task">
 						<input id="btn-input" type="text" name="new-task" class="form-control input-md" placeholder="Add new task" /><span class="input-group-btn" style="display: inherit;width: auto;">
 						<button class="btn btn-primary btn-md" value="submit" name="submit" id="btn-todo">Add</button>
 					</form>
@@ -60,7 +60,7 @@ require('nav.php'); # side nav
 	<script>
 		$(document).ready(function(){
 			$('.todo_del').click(function(){
-				$.post("/php/todo_del.php", {delId :$(this).find('em').attr('value')}, function() {location.reload();});
+				$.post("./php/todo_del.php", {delId :$(this).find('em').attr('value')}, function() {location.reload();});
 			});
 		});
 	</script>

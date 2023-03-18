@@ -56,8 +56,8 @@ if(!isset($_SESSION['loggedin'])){
 									<label>Chọn Môn</label>
 									<select name='mon' class="form-control">
 										<?php
-										
-										require("/php/conn.php");
+
+										require("./php/conn.php");
 										$tohop_list = $conn->query("SELECT mon FROM tohop WHERE user_id = ".$_SESSION['id']);
 										while($row = $tohop_list->fetch_assoc()){
 											echo "<option value='".$row['mon']."'>".$row['mon']."</option>";
@@ -98,7 +98,7 @@ if(!isset($_SESSION['loggedin'])){
 					<div class="panel-body">
 						<?php
 
-						require("/php/conn.php");
+						require("./php/conn.php");
 						
 						$tohop_list = $conn->query("SELECT `mon` FROM `tohop` WHERE `user_id` = ".$_SESSION['id']);
 						$mon = [];
