@@ -86,7 +86,7 @@ if(isset($_COOKIE['username']) && $_COOKIE['username']!==NULL){
     	event.preventDefault();
     	var formData = $(this).serialize();
     	$.ajax({
-    	  	url: "/php/login_check.php",
+    	  	url: "./php/login_check.php",
     	  	method: "post",
     	  	data: formData,
 			dataType: "json",
