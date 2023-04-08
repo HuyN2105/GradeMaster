@@ -31,11 +31,9 @@ echo
 		</div>
 		<div class="divider"></div>
 		<ul class="nav menu">
-			<li class = "'.$dashboard_act.'"><a href="index.php"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-			<li class = "'.$grade_act.'"><a href="grade.php"><em class="fa fa-calendar">&nbsp;</em> Grade Manage</a></li>
-			<li class="'.$chart_act.'"><a href="charts.php"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
-			<li class="'.$todo_act.'"><a href="todo.php"><em class="fa fa-clone">&nbsp;</em> Todo List</a></li>
-			<li><a href="logout.php"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+			<li class = "'.$grade_act.'"><a href="index.php"><em class="fa fa-calendar">&nbsp;</em> Quản lý điểm</a></li>
+			<li class="'.$todo_act.'"><a href="todo.php"><em class="fa fa-clone">&nbsp;</em> Danh sách việc cần làm</a></li>
+			<li><a href="logout.php"><em class="fa fa-power-off">&nbsp;</em> Đăng xuất</a></li>
 		</ul>
 	</div><!--/.sidebar-->
 	';

@@ -46,8 +46,8 @@ if(isset($_COOKIE['username']) && $_COOKIE['username']!==NULL){
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#"><span>Grade</span>Master</a>
 				<ul class="nav navbar-top-links navbar-right">
-					<li class="dropdown"><a href="/login.php">LOGIN</a></li>
-					<li class="dropdown"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfd9KC1Z-kbmN_GVTKq7QEk_PyYH-N0-p5AhKmRRcQ9gPzhUg/viewform?usp=pp_url">SIGN UP</a></li>
+					<li class="dropdown"><a href="/login.php">Đăng nhập</a></li>
+					<li class="dropdown"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfd9KC1Z-kbmN_GVTKq7QEk_PyYH-N0-p5AhKmRRcQ9gPzhUg/viewform?usp=pp_url">Đăng ký</a></li>
 				</ul>
 			</div>
 		</div><!-- /.container-fluid -->
@@ -56,7 +56,7 @@ if(isset($_COOKIE['username']) && $_COOKIE['username']!==NULL){
 	<div class="row" style="margin-top: 50vh; transform: translateY(-75%);">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">
-				<div class="panel-heading">Log in</div>
+				<div class="panel-heading">Đăng nhập</div>
 				<div class="panel-body">
 					<form id="login-form" method="post">
 						<fieldset>
@@ -68,10 +68,10 @@ if(isset($_COOKIE['username']) && $_COOKIE['username']!==NULL){
 							</div>
 							<div class="checkbox">
 								<label>
-									<input name="remember" type="checkbox">Remember Me
+									<input name="remember" type="checkbox">Ghi nhớ
 								</label>
 							</div>
-							<button class="btn btn-primary" name="submit" value="Submit">Login</button>
+							<button class="btn btn-primary" name="submit" value="Submit">Đăng nhập</button>
 						</fieldset>
 					</form>
 				</div>
@@ -93,14 +93,14 @@ if(isset($_COOKIE['username']) && $_COOKIE['username']!==NULL){
     	  	success: function(response){
 				console.log(response);
     	  	 	if(response.success) {
-        		  	alert("Login Successfully!"); 
+        		  	alert("Đăng nhập thành công!"); 
         		  	window.location.href = "index.php";
         		} else {
-        		  	alert("Wrong username or password!");
+        		  	alert("Sai mật khẩu hoặc tên đăng nhập!");
         		}
     	  	},
 			error: function(jqXHR, textStatus, errorThrown) {
-      		  	alert("Error: " + errorThrown);
+      		  	alert("Lỗi: " + errorThrown);
       		}
     	});
   	});

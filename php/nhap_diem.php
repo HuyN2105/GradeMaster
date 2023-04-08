@@ -9,6 +9,6 @@ print_r($mon." ".$diem);
 
 $result = $conn->query("INSERT INTO `tohop_data`(`user_id`, `ten mon`, `diem`, `ld`) VALUES (".$_SESSION['id'].", '".$mon."', '".$diem."', '".$ld."')");
 
-header("Location: grade.php");
+header("Location: ../grade.php");
 
 ?>

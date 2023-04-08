@@ -47,8 +47,8 @@ require('nav.php'); # side nav
 			<div class="panel-footer">
 				<div class="input-group" style="width: 100%">
 					<form method="post" action="./php/todo_add.php" style="width: calc( 100% - 45px );" class="add-new-task">
-						<input id="btn-input" type="text" name="new-task" class="form-control input-md" placeholder="Add new task" /><span class="input-group-btn" style="display: inherit;width: auto;">
-						<button class="btn btn-primary btn-md" value="submit" name="submit" id="btn-todo">Add</button>
+						<input id="btn-input" type="text" name="new-task" class="form-control input-md" placeholder="Thêm việc cần làm" /><span class="input-group-btn" style="display: inherit;width: auto;">
+						<button class="btn btn-primary btn-md" value="submit" name="submit" id="btn-todo">Thêm</button>
 					</form>
 				</span></div>
 			</div>
