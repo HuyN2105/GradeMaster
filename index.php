@@ -31,7 +31,7 @@ if(!isset($_SESSION['loggedin'])){
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<ol class="breadcrumb">
-				<li><a href="#">
+				<li><a href="index.php">
 					<em class="fa fa-home"></em>
 				</a></li>
 				<li class="active">Grade</li>
@@ -80,7 +80,7 @@ if(!isset($_SESSION['loggedin'])){
 							</div>
 							<div class="col-md-2">
 								<div class="form-group" style="transform: translateY(75%);">
-									<button type="submit" value="submit" name="submit" class="btn btn-primary">Submit Button</button>
+									<button type="submit" value="submit" name="submit" class="btn btn-primary">Xác nhận</button>
 								</div>
 							</div>
 						</form>

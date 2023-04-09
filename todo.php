@@ -36,6 +36,14 @@ require('nav.php'); # side nav
 	
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="margin-top: 5vh; margin-bottom: 5vh; ">
+		<div class="row" style="transform: translateY(-100%)">
+			<ol class="breadcrumb">
+				<li><a href="index.php">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Todo</li>
+			</ol>
+		</div><!--/.row-->
 		<div class="row" style="margin: 0">
 			<div class="panel-body">
 				<ul class="todo-list">
